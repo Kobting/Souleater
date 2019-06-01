@@ -1,0 +1,406 @@
+{
+  "souls" : [
+    {
+      "id": "AcidSlime_L",
+      "name": "Soul of Acid Slime (L)",
+      "atlas": "images/monsters/theBottom/slimeL/skeleton.atlas",
+      "json": "images/monsters/theBottom/slimeL/skeleton.json"
+    },
+    {
+      "id": "AcidSlime_M",
+      "name": "Soul of Acid Slime (M)",
+      "atlas": "images/monsters/theBottom/slimeM/skeleton.atlas",
+      "json": "images/monsters/theBottom/slimeM/skeleton.json"
+    },
+    {
+      "id": "AcidSlime_S",
+      "name": "Soul of Acid Slime (S)",
+      "atlas": "images/monsters/theBottom/slimeS/skeleton.atlas",
+      "json": "images/monsters/theBottom/slimeS/skeleton.json"
+    },
+    {
+      "id": "Apology Slime",
+      "name": "Soul of Apology Slime",
+      "atlas": "images/monsters/theBottom/slimeS/skeleton.atlas",
+      "json": "images/monsters/theBottom/slimeS/skeleton.json"
+    },
+    {
+      "id": "AwakenedOne",
+      "name": "Soul of Awakened One",
+      "atlas": "images/monsters/theForest/awakenedOne/skeleton.atlas",
+      "json": "images/monsters/theForest/awakenedOne/skeleton.json"
+    },
+    {
+      "id": "BanditBear",
+      "name": "Soul of Bear",
+      "atlas": "images/monsters/theCity/bear/skeleton.atlas",
+      "json": "images/monsters/theCity/bear/skeleton.json"
+    },
+    {
+      "id": "BanditChild",
+      "name": "Soul of Pointy",
+      "atlas": "images/monsters/theCity/pointy/skeleton.atlas",
+      "json": "images/monsters/theCity/pointy/skeleton.json"
+    },
+    {
+      "id": "BanditLeader",
+      "name": "Soul of Romeo",
+      "atlas": "images/monsters/theCity/romeo/skeleton.atlas",
+      "json": "images/monsters/theCity/romeo/skeleton.json"
+    },
+    {
+      "id": "BookOfStabbing",
+      "name": "Soul of Book of Stabbing",
+      "atlas": "images/monsters/theCity/stabBook/skeleton.atlas",
+      "json": "images/monsters/theCity/stabBook/skeleton.json"
+    },
+    {
+      "id": "BronzeAutomaton",
+      "name": "Soul of Bronze Automaton",
+      "atlas": "images/monsters/theCity/automaton/skeleton.atlas",
+      "json": "images/monsters/theCity/automaton/skeleton.json"
+    },
+    {
+      "id": "BronzeOrb",
+      "name": "Soul of Orb",
+      "atlas": "",
+      "json": ""
+    },
+    {
+      "id": "Byrd",
+      "name": "Soul of Byrd",
+      "atlas": "images/monsters/theCity/byrd/flying.atlas",
+      "json": "images/monsters/theCity/byrd/flying.json"
+    },
+    {
+      "id": "Centurion",
+      "name": "Soul of Centurion",
+      "atlas": "images/monsters/theCity/tank/skeleton.atlas",
+      "json": "images/monsters/theCity/tank/skeleton.json"
+    },
+    {
+      "id": "Champ",
+      "name": "Soul of The Chump",
+      "atlas": "images/monsters/theCity/champ/skeleton.atlas",
+      "json": "images/monsters/theCity/champ/skeleton.json"
+    },
+    {
+      "id": "Chosen",
+      "name": "Soul of Chosen",
+      "atlas": "images/monsters/theCity/chosen/skeleton.atlas",
+      "json": "images/monsters/theCity/chosen/skeleton.json"
+    },
+    {
+      "id": "Cultist",
+      "name": "Soul of Cultist",
+      "atlas": "images/monsters/theBottom/cultist/skeleton.atlas",
+      "json": "images/monsters/theBottom/cultist/skeleton.json"
+    },
+    {
+      "id": "Darkling",
+      "name": "Soul of Darkling",
+      "atlas": "images/monsters/theForest/darkling/skeleton.atlas",
+      "json": "images/monsters/theForest/darkling/skeleton.json"
+    },
+    {
+      "id": "Deca",
+      "name": "Soul of Deca",
+      "atlas": "images/monsters/theForest/deca/skeleton.atlas",
+      "json": "images/monsters/theForest/deca/skeleton.json"
+    },
+    {
+      "id": "Donu",
+      "name": "Soul of Donu",
+      "atlas": "images/monsters/theForest/donu/skeleton.atlas",
+      "json": "images/monsters/theForest/donu/skeleton.json"
+    },
+    {
+      "id": "Exploder",
+      "name": "Soul of Exploder",
+      "atlas": "images/monsters/theForest/exploder/skeleton.atlas",
+      "json": "images/monsters/theForest/exploder/skeleton.json"
+    },
+    {
+      "id": "FireOrb",
+      "name": "Soul of Fire Orb",
+      "atlas": "",
+      "json": ""
+    },
+    {
+      "id": "Dagger",
+      "name": "Soul of Dagger",
+      "atlas": "",
+      "json": ""
+    },
+    {
+      "id": "FlameBruiser",
+      "name": "Soul of Flame Bruiser",
+      "atlas": "",
+      "json": ""
+    },
+    {
+      "id": "Reptomancer",
+      "name": "Soul of Reptomancer",
+      "atlas": "images/monsters/theForest/mage/skeleton.atlas",
+      "json": "images/monsters/theForest/mage/skeleton.json"
+    },
+    {
+      "id": "FungiBeast",
+      "name": "Soul of Beast Fun Guy",
+      "atlas": "images/monsters/theBottom/fungi/skeleton.atlas",
+      "json": "images/monsters/theBottom/fungi/skeleton.json"
+    },
+    {
+      "id": "FuzzyLouseDefensive",
+      "name": "Soul of Louse",
+      "atlas": "images/monsters/theBottom/louseGreen/skeleton.atlas",
+      "json": "images/monsters/theBottom/louseGreen/skeleton.json"
+    },
+    {
+      "id": "FuzzyLouseNormal",
+      "name": "Soul of Louse",
+      "atlas": "images/monsters/theBottom/louseRed/skeleton.atlas",
+      "json": "images/monsters/theBottom/louseRed/skeleton.json"
+    },
+    {
+      "id": "GiantHead",
+      "name": "Soul of Giant Head",
+      "atlas": "images/monsters/theForest/head/skeleton.atlas",
+      "json": "images/monsters/theForest/head/skeleton.json"
+    },
+    {
+      "id": "GremlinFat",
+      "name": "Soul of Fat Gremlin",
+      "atlas": "images/monsters/theBottom/fatGremlin/skeleton.atlas",
+      "json": "images/monsters/theBottom/fatGremlin/skeleton.json"
+    },
+    {
+      "id": "GremlinLeader",
+      "name": "Soul of Gremlin Leader",
+      "atlas": "images/monsters/theCity/gremlinleader/skeleton.atlas",
+      "json": "images/monsters/theCity/gremlinleader/skeleton.json"
+    },
+    {
+      "id": "GremlinNob",
+      "name": "Soul of Gremlin Noob",
+      "atlas": "images/monsters/theBottom/nobGremlin/skeleton.atlas",
+      "json": "images/monsters/theBottom/nobGremlin/skeleton.json"
+    },
+    {
+      "id": "GremlinThief",
+      "name": "Soul of Sneaky Grimlin",
+      "atlas": "images/monsters/theBottom/thiefGremlin/skeleton.atlas",
+      "json": "images/monsters/theBottom/thiefGremlin/skeleton.json"
+    },
+    {
+      "id": "GremlinTsundere",
+      "name": "Soul of Shield Gremlin",
+      "atlas": "images/monsters/theBottom/femaleGremlin/skeleton.atlas",
+      "json": "images/monsters/theBottom/femaleGremlin/skeleton.json"
+    },
+    {
+      "id": "GremlinWarrior",
+      "name": "Soul of Happy Gremlin",
+      "atlas": "images/monsters/theBottom/angryGremlin/skeleton.atlas",
+      "json": "images/monsters/theBottom/angryGremlin/skeleton.json"
+    },
+    {
+      "id": "GremlinWizard",
+      "name": "Soul of Gremlin Wizard",
+      "atlas": "images/monsters/theBottom/wizardGremlin/skeleton.atlas",
+      "json": "images/monsters/theBottom/wizardGremlin/skeleton.json"
+    },
+    {
+      "id": "Healer",
+      "name": "Soul of Mystic",
+      "atlas": "images/monsters/theCity/healer/skeleton.atlas",
+      "json": "images/monsters/theCity/healer/skeleton.json"
+    },
+    {
+      "id": "JawWorm",
+      "name": "Soul of Jaw Worm",
+      "atlas": "images/monsters/theBottom/jawWorm/skeleton.atlas",
+      "json": "images/monsters/theBottom/jawWorm/skeleton.json"
+    },
+    {
+      "id": "Lagavulin",
+      "name": "Soul of Lagavulin",
+      "atlas": "images/monsters/theBottom/lagavulin/skeleton.atlas",
+      "json": "images/monsters/theBottom/lagavulin/skeleton.json"
+    },
+    {
+      "id": "Looter",
+      "name": "Soul of Looter",
+      "atlas": "images/monsters/theBottom/looter/skeleton.atlas",
+      "json": "images/monsters/theBottom/looter/skeleton.json"
+    },
+    {
+      "id": "Maw",
+      "name": "Soul of The Maw",
+      "atlas": "images/monsters/theForest/maw/skeleton.atlas",
+      "json": "images/monsters/theForest/maw/skeleton.json"
+    },
+    {
+      "id": "Mugger",
+      "name": "Soul of Mugger",
+      "atlas": "images/monsters/theCity/looterAlt/skeleton.atlas",
+      "json": "images/monsters/theCity/looterAlt/skeleton.json"
+    },
+    {
+      "id": "Nemesis",
+      "name": "Soul of Nemesis",
+      "atlas": "images/monsters/theForest/nemesis/skeleton.atlas",
+      "json": "images/monsters/theForest/nemesis/skeleton.json"
+    },
+    {
+      "id": "Orb Walker",
+      "name": "Soul of Orb Walker",
+      "atlas": "images/monsters/theForest/orbWalker/skeleton.atlas",
+      "json": "images/monsters/theForest/orbWalker/skeleton.json"
+    },
+    {
+      "id": "Puppeteer",
+      "name": "Soul of Puppeteer",
+      "atlas": "",
+      "json": ""
+    },
+    {
+      "id": "Repulsor",
+      "name": "Soul of Repulsor",
+      "atlas": "images/monsters/theForest/repulser/skeleton.atlas",
+      "json": "images/monsters/theForest/repulser/skeleton.json"
+    },
+    {
+      "id": "Sentry",
+      "name": "Soul of Sentry",
+      "atlas": "images/monsters/theBottom/sentry/skeleton.atlas",
+      "json": "images/monsters/theBottom/sentry/skeleton.json"
+    },
+    {
+      "id": "Serpent",
+      "name": "Soul of Spire Growth",
+      "atlas": "images/monsters/theForest/spireGrowth/skeleton.atlas",
+      "json": "images/monsters/theForest/spireGrowth/skeleton.json"
+    },
+    {
+      "id": "Shelled Parasite",
+      "name": "Soul of Shelled Parasite",
+      "atlas": "images/monsters/theCity/shellMonster/skeleton.atlas",
+      "json": "images/monsters/theCity/shellMonster/skeleton.json"
+    },
+    {
+      "id": "SlaverBlue",
+      "name": "Soul of Slaver",
+      "atlas": "images/monsters/theBottom/blueSlaver/skeleton.atlas",
+      "json": "images/monsters/theBottom/blueSlaver/skeleton.json"
+    },
+    {
+      "id": "SlaverBoss",
+      "name": "Soul of Taskmaster",
+      "atlas": "",
+      "json": ""
+    },
+    {
+      "id": "SlaverRed",
+      "name": "Soul of Slaver",
+      "atlas": "images/monsters/theBottom/redSlaver/skeleton.atlas",
+      "json": "images/monsters/theBottom/redSlaver/skeleton.json"
+    },
+    {
+      "id": "SlimeBoss",
+      "name": "Soul of SlimeBoss",
+      "atlas": "images/monsters/theCity/slaverMaster/skeleton.atlas",
+      "json": "images/monsters/theCity/slaverMaster/skeleton.json"
+    },
+    {
+      "id": "SnakePlant",
+      "name": "Soul of Snake Plant",
+      "atlas": "images/monsters/theCity/snakePlant/skeleton.atlas",
+      "json": "images/monsters/theCity/snakePlant/skeleton.json"
+    },
+    {
+      "id": "Snecko",
+      "name": "Soul of Snecko",
+      "atlas": "images/monsters/theCity/reptile/skeleton.atlas",
+      "json": "images/monsters/theCity/reptile/skeleton.json"
+    },
+    {
+      "id": "SphericGuardian",
+      "name": "Soul of Spheric Guardian",
+      "atlas": "images/monsters/theCity/sphere/skeleton.atlas",
+      "json": "images/monsters/theCity/sphere/skeleton.json"
+    },
+    {
+      "id": "SpikeSlime_L",
+      "name": "Soul of Spike Slime (L)",
+      "atlas": "images/monsters/theBottom/slimeAltL/skeleton.atlas",
+      "json": "images/monsters/theBottom/slimeAltL/skeleton.json"
+    },
+    {
+      "id": "SpikeSlime_M",
+      "name": "Soul of Spike Slime (M)",
+      "atlas": "images/monsters/theBottom/slimeAltM/skeleton.atlas",
+      "json": "images/monsters/theBottom/slimeAltM/skeleton.json"
+    },
+    {
+      "id": "SpikeSlime_S",
+      "name": "Soul of Spike Slime (S)",
+      "atlas": "images/monsters/theBottom/slimeAltS/skeleton.atlas",
+      "json": "images/monsters/theBottom/slimeAltS/skeleton.json"
+    },
+    {
+      "id": "Spiker",
+      "name": "Soul of Spiker",
+      "atlas": "images/monsters/theForest/spiker/skeleton.atlas",
+      "json": "images/monsters/theForest/spiker/skeleton.json"
+    },
+    {
+      "id": "TheCollector",
+      "name": "Soul of The Collector",
+      "atlas": "images/monsters/theCity/collector/skeleton.atlas",
+      "json": "images/monsters/theCity/collector/skeleton.json"
+    },
+    {
+      "id": "TheGuardian",
+      "name": "Soul of The Guardian",
+      "atlas": "images/monsters/theBottom/boss/guardian/skeleton.atlas",
+      "json": "images/monsters/theBottom/boss/guardian/skeleton.json"
+    },
+    {
+      "id": "TimeEater",
+      "name": "Soul of TimeEater",
+      "atlas": "images/monsters/theForest/timeEater/skeleton.atlas",
+      "json": "images/monsters/theForest/timeEater/skeleton.json"
+    },
+    {
+      "id": "TorchHead",
+      "name": "Soul of Torch Head",
+      "atlas": "images/monsters/theCity/torchHead/skeleton.atlas",
+      "json": "images/monsters/theCity/torchHead/skeleton.json"
+    },
+    {
+      "id": "Transient",
+      "name": "Soul of Transient",
+      "atlas": "images/monsters/theForest/transient/skeleton.atlas",
+      "json": "images/monsters/theForest/transient/skeleton.json"
+    },
+    {
+      "id": "SpireShield",
+      "name": "Soul of Spire Shield",
+      "atlas": "images/monsters/theEnding/shield/skeleton.atlas",
+      "json": "images/monsters/theEnding/shield/skeleton.json"
+    },
+    {
+      "id": "SpireSpear",
+      "name": "Soul of Spire Spear",
+      "atlas": "images/monsters/theEnding/spear/skeleton.atlas",
+      "json": "images/monsters/theEnding/spear/skeleton.json"
+    },
+    {
+      "id": "WrithingMass",
+      "name": "Soul of Writhing Mass",
+      "atlas": "images/monsters/theForest/spaghetti/skeleton.atlas",
+      "json": "images/monsters/theForest/spaghetti/skeleton.json"
+    }
+  ]
+}
