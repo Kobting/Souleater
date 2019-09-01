@@ -49,5 +49,5 @@ data class Soul(
         val monsterSkeletonJson: String?,
         var monsterType: AbstractMonster.EnemyType = AbstractMonster.EnemyType.NORMAL,
         var width: Float = 0F,
-        var height: Float = 0F) {
-}
+        var height: Float = 0F)
+
