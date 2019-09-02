@@ -20,6 +20,7 @@ object SoulMapper: PostDungeonInitializeSubscriber {
     val currentSouls = mutableListOf<Soul>()
 
     @JvmStatic
+    @JvmOverloads
     fun addSouls(soulJsonPath: String, soulReplacer: SoulReplacer? = null) {
         val gson = GsonBuilder()
                 .registerTypeAdapter(SoulInfo.type, SoulInfoDeserializer())
