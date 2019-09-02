@@ -11,7 +11,7 @@ class SoulStealer : KustomCard(
         ID,
         COST,
         CardType.ATTACK,
-        CardColor.RED,
+        CardColor.COLORLESS,
         AbstractCard.CardRarity.COMMON,
         CardTarget.ENEMY
 ) {
@@ -24,6 +24,11 @@ class SoulStealer : KustomCard(
         private const val COST = 0
         private const val DMG_AMT = 4
 
+    }
+
+    init {
+        this.baseDamage = DMG_AMT
+        this.damage = baseDamage
     }
 
     override fun use(player: AbstractPlayer?, monster: AbstractMonster?) {

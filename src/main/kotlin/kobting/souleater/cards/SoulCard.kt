@@ -17,7 +17,7 @@ open class SoulCard(var soul: Soul) : CustomCard(
         "Summon ${soul.monsterName}",
         "kobting/images/souleater/cards/beta_purple.png",
         0,
-        "Summon the captured soul of a ${soul.monsterName}",
+        "Summon the captured soul of a ${soul.monsterName}. NL Exhaust.",
         CardType.SKILL,
         CardColor.COLORLESS,
         CardRarity.SPECIAL,
@@ -26,6 +26,10 @@ open class SoulCard(var soul: Soul) : CustomCard(
 
     private var didUse: Boolean = false
     var placeSoulAction: PlaceSoulAction? = null
+
+    init {
+        this.exhaust = true
+    }
 
     override fun use(player: AbstractPlayer, monster: AbstractMonster?) {
         placeSoulAction = AbstractDungeon.actionManager.addToBottomAndReturn(PlaceSoulAction(player, soul, this))
