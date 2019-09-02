@@ -20,7 +20,7 @@ object SoulMapper: PostDungeonInitializeSubscriber {
     val currentSouls = mutableListOf<Soul>()
 
     @JvmStatic
-    fun addSouls(soulJsonPath: String, replaceIfExists: Boolean = false) {
+    fun addSouls(soulJsonPath: String, soulReplacer: SoulReplacer? = null) {
         val gson = GsonBuilder()
                 .registerTypeAdapter(SoulInfo.type, SoulInfoDeserializer())
                 .excludeFieldsWithoutExposeAnnotation()
@@ -33,7 +33,7 @@ object SoulMapper: PostDungeonInitializeSubscriber {
         soulInfo?.souls?.forEach {
             println(it.toString())
             val existingSoul = monsterSet.find { found -> found.monsterId == it.monsterId }
-            if(existingSoul != null && replaceIfExists) {
+            if(existingSoul != null && soulReplacer?.allowReplacing(existingSoul) == true) {
                 monsterSet.remove(existingSoul)
             }
             monsterSet.add(it)
@@ -47,5 +47,9 @@ object SoulMapper: PostDungeonInitializeSubscriber {
 
     override fun receivePostDungeonInitialize() {
         currentSouls.clear()
+    }
+
+    interface SoulReplacer {
+        fun allowReplacing(soul: Soul): Boolean
     }
 }
