@@ -14,10 +14,13 @@ object SoulMapper: PostDungeonInitializeSubscriber {
         BaseMod.subscribe(this)
     }
 
+    @JvmStatic
     private val monsterSet: MutableSet<Soul> = mutableSetOf()
+    @JvmStatic
     val currentSouls = mutableListOf<Soul>()
 
-    fun addSouls(soulJsonPath: String) {
+    @JvmStatic
+    fun addSouls(soulJsonPath: String, replaceIfExists: Boolean = false) {
         val gson = GsonBuilder()
                 .registerTypeAdapter(SoulInfo.type, SoulInfoDeserializer())
                 .excludeFieldsWithoutExposeAnnotation()
@@ -29,12 +32,17 @@ object SoulMapper: PostDungeonInitializeSubscriber {
         println("------- Souls Found: ${soulInfo?.souls?.size ?: 0}-------")
         soulInfo?.souls?.forEach {
             println(it.toString())
+            val existingSoul = monsterSet.find { found -> found.monsterId == it.monsterId }
+            if(existingSoul != null && replaceIfExists) {
+                monsterSet.remove(existingSoul)
+            }
             monsterSet.add(it)
         }
         println("------- Added Souls --------")
         monsterSet.map(::println)
     }
 
+    @JvmStatic
     fun getSoulFromId(id: String) = monsterSet.find { it.monsterId == id }
 
     override fun receivePostDungeonInitialize() {
