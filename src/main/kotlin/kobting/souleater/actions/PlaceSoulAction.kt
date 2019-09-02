@@ -7,14 +7,15 @@ import com.badlogic.gdx.math.Vector2
 import com.megacrit.cardcrawl.actions.AbstractGameAction
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.Settings
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.*
 import com.megacrit.cardcrawl.helpers.input.InputHelper
 import kobting.friendlyminions.helpers.BasePlayerMinionHelper
+import kobting.friendlyminions.monsters.MinionMoveGroup
 import kobting.souleater.souls.Soul
 import kobting.souleater.souls.SoulMonster
+import kobting.souleater.souls.SoulMoveHelper
 
-class PlaceSoulAction(private val player: AbstractPlayer, private val soul: Soul, private val placeSoulComplete: PlaceSoulComplete): AbstractGameAction() {
+open class PlaceSoulAction(val player: AbstractPlayer, val soul: Soul, val placeSoulComplete: PlaceSoulComplete): AbstractGameAction() {
 
     private val initialMousePosition: Vector2
     private lateinit var controlPoint: Vector2
@@ -31,6 +32,7 @@ class PlaceSoulAction(private val player: AbstractPlayer, private val soul: Soul
             BasePlayerMinionHelper.addMinion(player, SoulMonster(soul).apply {
                 this.drawX = InputHelper.mX.toFloat()
                 this.drawY = InputHelper.mY.toFloat()
+                this.moves = MinionMoveGroup(SoulMoveHelper.createMinionMoves(this, soul.soulMoveInfo), this.drawX, this.drawY)
             })
             placeSoulComplete.onPlaceSoulComplete(true)
             this.isDone = true
@@ -40,6 +42,7 @@ class PlaceSoulAction(private val player: AbstractPlayer, private val soul: Soul
     fun render(sb: SpriteBatch) {
         renderArrow(sb)
     }
+
 
     private fun renderArrow(sb: SpriteBatch) {
         val x = InputHelper.mX.toFloat()

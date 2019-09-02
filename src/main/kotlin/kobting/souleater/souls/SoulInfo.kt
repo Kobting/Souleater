@@ -7,7 +7,6 @@ import com.google.gson.JsonElement
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
-import com.megacrit.cardcrawl.helpers.EnemyData
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import java.lang.reflect.Type
 
@@ -49,5 +48,7 @@ data class Soul(
         val monsterSkeletonJson: String?,
         var monsterType: AbstractMonster.EnemyType = AbstractMonster.EnemyType.NORMAL,
         var width: Float = 0F,
-        var height: Float = 0F)
+        var height: Float = 0F,
+        @SerializedName("moves")
+        val soulMoveInfo: List<SoulMove>? = null)
 
