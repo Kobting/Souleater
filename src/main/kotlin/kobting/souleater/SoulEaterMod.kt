@@ -42,7 +42,7 @@ class SoulEaterMod private constructor(): EditKeywordsSubscriber, EditCardsSubsc
     }
 
     override fun receiveEditKeywords() {
-        SoulMapper.addSouls("kobting/localization/eng/souleater-souls.json")
+
     }
 
     override fun receiveEditCards() {
@@ -50,6 +50,25 @@ class SoulEaterMod private constructor(): EditKeywordsSubscriber, EditCardsSubsc
     }
 
     override fun receiveEditStrings() {
+
+        SoulMoveHelper.addCustomMove("bAndD", object : CustomSoulMove {
+            override fun onRequestMoveImage(): Texture? = null
+
+            override fun onRequestMoveDescription(): String = "Gain 5 Block. NL Deal 6 Damage."
+
+            override fun onRequestMoveActions(minion: AbstractFriendlyMonster): Runnable {
+                return Runnable {
+                    AbstractDungeon.actionManager.addToBottom(GainBlockAction(minion, minion, 5))
+                    val target = AbstractDungeon.getRandomMonster()
+                    val info = DamageInfo(minion, 6, DamageInfo.DamageType.NORMAL)
+                    info.applyPowers(minion, target)
+                    AbstractDungeon.actionManager.addToBottom(DamageAction(target, info))
+                }
+            }
+        })
+
+        SoulMapper.addSouls("kobting/localization/eng/souleater-souls.json")
+
         BaseMod.loadCustomStrings(CardStrings::class.java, Gdx.files.internal("kobting/localization/eng/souleater-cards.json").readString(StandardCharsets.UTF_8.toString()))
     }
 }

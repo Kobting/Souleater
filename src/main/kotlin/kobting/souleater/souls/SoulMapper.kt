@@ -4,9 +4,6 @@ import basemod.BaseMod
 import basemod.interfaces.PostDungeonInitializeSubscriber
 import com.badlogic.gdx.Gdx
 import com.google.gson.GsonBuilder
-import com.google.gson.reflect.TypeToken
-import java.io.File
-import java.io.InputStreamReader
 
 object SoulMapper: PostDungeonInitializeSubscriber {
 
@@ -18,6 +15,8 @@ object SoulMapper: PostDungeonInitializeSubscriber {
     private val monsterSet: MutableSet<Soul> = mutableSetOf()
     @JvmStatic
     val currentSouls = mutableListOf<Soul>()
+
+    val soulCardPrefix = "soulcard:"
 
     @JvmStatic
     @JvmOverloads

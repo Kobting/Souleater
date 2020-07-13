@@ -10,10 +10,11 @@ import kobting.friendlyminions.helpers.BasePlayerMinionHelper
 import kobting.souleater.actions.PlaceSoulAction
 import kobting.souleater.helpers.addToBottomAndReturn
 import kobting.souleater.souls.Soul
+import kobting.souleater.souls.SoulMapper
 
 
 open class SoulCard(var soul: Soul) : CustomCard(
-        "souleater:${soul.monsterId}",
+        "${SoulMapper.soulCardPrefix}${soul.monsterId}",
         "Summon ${soul.monsterName}",
         "kobting/images/souleater/cards/beta_purple.png",
         0,
@@ -69,4 +70,11 @@ open class SoulCard(var soul: Soul) : CustomCard(
     }
 
     data class SoulCardState(val soul: Soul, val deckPosition: Int)
+
+    companion object {
+        @JvmStatic
+        fun createSoulCard(cardId: String): SoulCard? {
+            return SoulCard(SoulMapper.getSoulFromId(cardId.replace(SoulMapper.soulCardPrefix, "")) ?: return null)
+        }
+    }
 }

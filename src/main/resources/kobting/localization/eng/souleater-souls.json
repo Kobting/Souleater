@@ -220,7 +220,10 @@
       "id": "JawWorm",
       "name": "Soul of Jaw Worm",
       "atlas": "images/monsters/theBottom/jawWorm/skeleton.atlas",
-      "json": "images/monsters/theBottom/jawWorm/skeleton.json"
+      "json": "images/monsters/theBottom/jawWorm/skeleton.json",
+      "moves": [
+        {"type": "CUSTOM", "amount": 1, "id": "bAndD"}
+      ]
     },
     {
       "id": "Lagavulin",
