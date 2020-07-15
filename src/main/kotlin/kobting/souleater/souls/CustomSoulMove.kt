@@ -5,6 +5,6 @@ import kobting.friendlyminions.monsters.AbstractFriendlyMonster
 
 interface CustomSoulMove {
     fun onRequestMoveImage(): Texture?
-    fun onRequestMoveDescription(): String
-    fun onRequestMoveActions(minion: AbstractFriendlyMonster): Runnable
+    fun onRequestMoveDescription(soulMove: SoulMove): String
+    fun onRequestMoveActions(minion: AbstractFriendlyMonster, soulMove: SoulMove): Runnable
 }

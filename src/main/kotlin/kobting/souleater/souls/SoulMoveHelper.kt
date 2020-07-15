@@ -128,8 +128,8 @@ object SoulMoveHelper {
                 soulMove.id,
                 minion,
                 customMove?.onRequestMoveImage() ?: Texture("kobting/images/souleater/ui/atk_bubble.png"),
-                customMove?.onRequestMoveDescription() ?: "No Move Description!!!",
-                customMove?.onRequestMoveActions(minion))
+                customMove?.onRequestMoveDescription(soulMove) ?: "No Move Description!!!",
+                customMove?.onRequestMoveActions(minion, soulMove))
     }
 
 }

@@ -12,11 +12,13 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction
 import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.localization.CardStrings
+import com.megacrit.cardcrawl.monsters.city.Byrd
 import kobting.friendlyminions.monsters.AbstractFriendlyMonster
 import kobting.souleater.cards.SoulStealer
 import kobting.souleater.helpers.CardHelper
 import kobting.souleater.souls.CustomSoulMove
 import kobting.souleater.souls.SoulMapper
+import kobting.souleater.souls.SoulMove
 import kobting.souleater.souls.SoulMoveHelper
 import java.nio.charset.StandardCharsets
 
@@ -54,9 +56,9 @@ class SoulEaterMod private constructor(): EditKeywordsSubscriber, EditCardsSubsc
         SoulMoveHelper.addCustomMove("bAndD", object : CustomSoulMove {
             override fun onRequestMoveImage(): Texture? = null
 
-            override fun onRequestMoveDescription(): String = "Gain 5 Block. NL Deal 6 Damage."
+            override fun onRequestMoveDescription(soulMove: SoulMove): String = "Gain 5 Block. NL Deal 6 Damage."
 
-            override fun onRequestMoveActions(minion: AbstractFriendlyMonster): Runnable {
+            override fun onRequestMoveActions(minion: AbstractFriendlyMonster, soulMove: SoulMove): Runnable {
                 return Runnable {
                     AbstractDungeon.actionManager.addToBottom(GainBlockAction(minion, minion, 5))
                     val target = AbstractDungeon.getRandomMonster()
@@ -67,8 +69,32 @@ class SoulEaterMod private constructor(): EditKeywordsSubscriber, EditCardsSubsc
             }
         })
 
+        addCustomSoulMoves()
+
         SoulMapper.addSouls("kobting/localization/eng/souleater-souls.json")
 
         BaseMod.loadCustomStrings(CardStrings::class.java, Gdx.files.internal("kobting/localization/eng/souleater-cards.json").readString(StandardCharsets.UTF_8.toString()))
+    }
+
+    private fun addCustomSoulMoves() {
+        SoulMoveHelper.addCustomMove("multi_attack", object : CustomSoulMove {
+            override fun onRequestMoveImage(): Texture? = null
+            override fun onRequestMoveDescription(soulMove: SoulMove): String {
+                return "Deal ${soulMove.amount} damage 3 times."
+            }
+
+            override fun onRequestMoveActions(minion: AbstractFriendlyMonster, soulMove: SoulMove): Runnable {
+                return Runnable {
+                    val target = AbstractDungeon.getRandomMonster()
+                    for (i in 0 until 3) {
+                        AbstractDungeon.actionManager.addToBottom(DamageAction(target, DamageInfo(minion, soulMove.amount, DamageInfo.DamageType.NORMAL).apply {
+                            applyPowers(minion, target)
+                        }))
+                    }
+                }
+            }
+
+
+        })
     }
 }

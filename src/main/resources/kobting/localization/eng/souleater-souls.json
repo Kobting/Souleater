@@ -4,25 +4,40 @@
       "id": "AcidSlime_L",
       "name": "Soul of Acid Slime (L)",
       "atlas": "images/monsters/theBottom/slimeL/skeleton.atlas",
-      "json": "images/monsters/theBottom/slimeL/skeleton.json"
+      "json": "images/monsters/theBottom/slimeL/skeleton.json",
+      "moves": [
+        {"type": "ATTACK", "amount": 5},
+        {"type": "WEAKEN", "amount": 3}
+      ]
     },
     {
       "id": "AcidSlime_M",
       "name": "Soul of Acid Slime (M)",
       "atlas": "images/monsters/theBottom/slimeM/skeleton.atlas",
-      "json": "images/monsters/theBottom/slimeM/skeleton.json"
+      "json": "images/monsters/theBottom/slimeM/skeleton.json",
+      "moves": [
+        {"type": "ATTACK", "amount": 4},
+        {"type": "WEAKEN", "amount": 2}
+      ]
     },
     {
       "id": "AcidSlime_S",
       "name": "Soul of Acid Slime (S)",
       "atlas": "images/monsters/theBottom/slimeS/skeleton.atlas",
-      "json": "images/monsters/theBottom/slimeS/skeleton.json"
+      "json": "images/monsters/theBottom/slimeS/skeleton.json",
+      "moves": [
+        {"type": "ATTACK", "amount": 3},
+        {"type": "WEAKEN", "amount": 2}
+      ]
     },
     {
       "id": "Apology Slime",
       "name": "Soul of Apology Slime",
       "atlas": "images/monsters/theBottom/slimeS/skeleton.atlas",
-      "json": "images/monsters/theBottom/slimeS/skeleton.json"
+      "json": "images/monsters/theBottom/slimeS/skeleton.json",
+      "moves": [
+        {"type": "WEAKEN", "amount": 99}
+      ]
     },
     {
       "id": "AwakenedOne",
@@ -52,7 +67,11 @@
       "id": "BookOfStabbing",
       "name": "Soul of Book of Stabbing",
       "atlas": "images/monsters/theCity/stabBook/skeleton.atlas",
-      "json": "images/monsters/theCity/stabBook/skeleton.json"
+      "json": "images/monsters/theCity/stabBook/skeleton.json",
+      "moves": [
+        {"type": "ATTACK", "amount": 10},
+        {"type": "VULNERABLE", "amount": 1}
+      ]
     },
     {
       "id": "BronzeAutomaton",
@@ -70,7 +89,10 @@
       "id": "Byrd",
       "name": "Soul of Byrd",
       "atlas": "images/monsters/theCity/byrd/flying.atlas",
-      "json": "images/monsters/theCity/byrd/flying.json"
+      "json": "images/monsters/theCity/byrd/flying.json",
+      "moves": [
+        {"type": "CUSTOM", "amount": 5, "id": "multi_attack"}
+      ]
     },
     {
       "id": "Centurion",
