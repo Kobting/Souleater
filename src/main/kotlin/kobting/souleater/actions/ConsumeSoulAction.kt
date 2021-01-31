@@ -13,7 +13,7 @@ import kobting.souleater.helpers.willDie
 import kobting.souleater.souls.SoulMapper
 import kobting.souleater.souls.SoulMonster
 
-class ConsumeSoulAction(monster: AbstractMonster?, private val damageInfo: DamageInfo) : AbstractGameAction() {
+class ConsumeSoulAction(private val monster: AbstractMonster?, private val damageInfo: DamageInfo) : AbstractGameAction() {
 
     init {
         setValues(monster, damageInfo)
@@ -25,6 +25,7 @@ class ConsumeSoulAction(monster: AbstractMonster?, private val damageInfo: Damag
         val monster = target as? AbstractMonster?
         if (duration == 0.1F && monster != null) {
             AbstractDungeon.effectList.add(FlashAtkImgEffect(monster.hb.cX, monster.hb.cY, AttackEffect.NONE))
+            damageInfo.applyPowers(this.monster, monster)
             monster.damage(damageInfo)
             if (monster.willDie()) {
                 val soul = SoulMapper.getSoulFromId(monster.id)

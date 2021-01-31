@@ -12,7 +12,7 @@ object SoulMapper: PostDungeonInitializeSubscriber {
     }
 
     @JvmStatic
-    private val monsterSet: MutableSet<Soul> = mutableSetOf()
+    private val monsterSet: MutableSet<Soul?> = mutableSetOf()
     @JvmStatic
     val currentSouls = mutableListOf<Soul>()
 
@@ -32,7 +32,7 @@ object SoulMapper: PostDungeonInitializeSubscriber {
         println("------- Souls Found: ${soulInfo?.souls?.size ?: 0}-------")
         soulInfo?.souls?.forEach {
             println(it.toString())
-            val existingSoul = monsterSet.find { found -> found.monsterId == it.monsterId }
+            val existingSoul = monsterSet.find { found -> found?.monsterId == it.monsterId }
             if(existingSoul != null && soulReplacer?.allowReplacing(existingSoul) == true) {
                 monsterSet.remove(existingSoul)
             }
@@ -43,7 +43,7 @@ object SoulMapper: PostDungeonInitializeSubscriber {
     }
 
     @JvmStatic
-    fun getSoulFromId(id: String) = monsterSet.find { it.monsterId == id }
+    fun getSoulFromId(id: String) = monsterSet.find { it?.monsterId == id }
 
     override fun receivePostDungeonInitialize() {
         currentSouls.clear()

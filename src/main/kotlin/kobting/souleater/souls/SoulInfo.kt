@@ -50,5 +50,15 @@ data class Soul(
         var width: Float = 0F,
         var height: Float = 0F,
         @SerializedName("moves")
-        val soulMoveInfo: List<SoulMove>? = null)
+        val soulMoveInfo: List<SoulMove>? = null,
+        @SerializedName("requiresUpgrade")
+        val requiresUpgrade: Boolean = false,
+    ) {
+
+    //Fix this. The SoulMapper is using a set which is really a java hashset and there is a null pointer issue when adding to the set
+    override fun hashCode(): Int {
+        return super.hashCode()
+    }
+
+}
 
