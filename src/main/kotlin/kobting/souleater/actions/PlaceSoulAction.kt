@@ -24,7 +24,8 @@ open class PlaceSoulAction(val player: AbstractPlayer, val soul: Soul, val place
 
     init {
         isDone = false
-        initialMousePosition = Vector2(InputHelper.mX.toFloat(), InputHelper.mY.toFloat())
+
+        initialMousePosition = Vector2(Settings.WIDTH / 2f, Settings.HEIGHT / 2f)
     }
 
     override fun update() {

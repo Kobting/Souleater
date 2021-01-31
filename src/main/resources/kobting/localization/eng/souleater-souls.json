@@ -1,13 +1,20 @@
 {
-  "souls" : [
+  "souls": [
     {
       "id": "AcidSlime_L",
       "name": "Soul of Acid Slime (L)",
       "atlas": "images/monsters/theBottom/slimeL/skeleton.atlas",
       "json": "images/monsters/theBottom/slimeL/skeleton.json",
+      "requiresUpgrade": false,
       "moves": [
-        {"type": "ATTACK", "amount": 5},
-        {"type": "WEAKEN", "amount": 3}
+        {
+          "type": "ATTACK",
+          "amount": 5
+        },
+        {
+          "type": "WEAKEN",
+          "amount": 2
+        }
       ]
     },
     {
@@ -15,9 +22,16 @@
       "name": "Soul of Acid Slime (M)",
       "atlas": "images/monsters/theBottom/slimeM/skeleton.atlas",
       "json": "images/monsters/theBottom/slimeM/skeleton.json",
+      "requiresUpgrade": false,
       "moves": [
-        {"type": "ATTACK", "amount": 4},
-        {"type": "WEAKEN", "amount": 2}
+        {
+          "type": "ATTACK",
+          "amount": 4
+        },
+        {
+          "type": "WEAKEN",
+          "amount": 1
+        }
       ]
     },
     {
@@ -25,9 +39,16 @@
       "name": "Soul of Acid Slime (S)",
       "atlas": "images/monsters/theBottom/slimeS/skeleton.atlas",
       "json": "images/monsters/theBottom/slimeS/skeleton.json",
+      "requiresUpgrade": false,
       "moves": [
-        {"type": "ATTACK", "amount": 3},
-        {"type": "WEAKEN", "amount": 2}
+        {
+          "type": "ATTACK",
+          "amount": 2
+        },
+        {
+          "type": "WEAKEN",
+          "amount": 1
+        }
       ]
     },
     {
@@ -35,54 +56,101 @@
       "name": "Soul of Apology Slime",
       "atlas": "images/monsters/theBottom/slimeS/skeleton.atlas",
       "json": "images/monsters/theBottom/slimeS/skeleton.json",
+      "requiresUpgrade": false,
       "moves": [
-        {"type": "WEAKEN", "amount": 99}
+        {
+          "type": "WEAKEN",
+          "amount": 99
+        }
       ]
     },
     {
       "id": "AwakenedOne",
       "name": "Soul of Awakened One",
       "atlas": "images/monsters/theForest/awakenedOne/skeleton.atlas",
-      "json": "images/monsters/theForest/awakenedOne/skeleton.json"
+      "json": "images/monsters/theForest/awakenedOne/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "BanditBear",
       "name": "Soul of Bear",
       "atlas": "images/monsters/theCity/bear/skeleton.atlas",
-      "json": "images/monsters/theCity/bear/skeleton.json"
+      "json": "images/monsters/theCity/bear/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 9
+        },
+        {
+          "type": "DEFEND",
+          "amount": 4
+        }
+      ]
     },
     {
       "id": "BanditChild",
       "name": "Soul of Pointy",
       "atlas": "images/monsters/theCity/pointy/skeleton.atlas",
-      "json": "images/monsters/theCity/pointy/skeleton.json"
+      "json": "images/monsters/theCity/pointy/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 9
+        },
+        {
+          "type": "DEFEND",
+          "amount": 4
+        }
+      ]
     },
     {
       "id": "BanditLeader",
       "name": "Soul of Romeo",
       "atlas": "images/monsters/theCity/romeo/skeleton.atlas",
-      "json": "images/monsters/theCity/romeo/skeleton.json"
+      "json": "images/monsters/theCity/romeo/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 10
+        },
+        {
+          "type": "WEAKEN",
+          "amount": 2
+        }
+      ]
     },
     {
       "id": "BookOfStabbing",
       "name": "Soul of Book of Stabbing",
       "atlas": "images/monsters/theCity/stabBook/skeleton.atlas",
       "json": "images/monsters/theCity/stabBook/skeleton.json",
+      "requiresUpgrade": true,
       "moves": [
-        {"type": "ATTACK", "amount": 10},
-        {"type": "VULNERABLE", "amount": 1}
+        {
+          "type": "CUSTOM",
+          "amount": 4,
+          "id": "multi_attack_book_of_stabbing"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 10
+        }
       ]
     },
     {
       "id": "BronzeAutomaton",
       "name": "Soul of Bronze Automaton",
       "atlas": "images/monsters/theCity/automaton/skeleton.atlas",
-      "json": "images/monsters/theCity/automaton/skeleton.json"
+      "json": "images/monsters/theCity/automaton/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "BronzeOrb",
       "name": "Soul of Orb",
-      "atlas": "",
+      "atlas": "images/monsters/theCity/automaton/orb.png",
       "json": ""
     },
     {
@@ -90,342 +158,721 @@
       "name": "Soul of Byrd",
       "atlas": "images/monsters/theCity/byrd/flying.atlas",
       "json": "images/monsters/theCity/byrd/flying.json",
+      "requiresUpgrade": false,
       "moves": [
-        {"type": "CUSTOM", "amount": 5, "id": "multi_attack"}
+        {
+          "type": "CUSTOM",
+          "amount": 5,
+          "id": "multi_attack"
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 1,
+          "id": "byrd_flight"
+        }
       ]
     },
     {
       "id": "Centurion",
       "name": "Soul of Centurion",
       "atlas": "images/monsters/theCity/tank/skeleton.atlas",
-      "json": "images/monsters/theCity/tank/skeleton.json"
+      "json": "images/monsters/theCity/tank/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 6
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 6,
+          "id": "random_defend_centurion"
+        }
+      ]
     },
     {
       "id": "Champ",
       "name": "Soul of The Chump",
       "atlas": "images/monsters/theCity/champ/skeleton.atlas",
-      "json": "images/monsters/theCity/champ/skeleton.json"
+      "json": "images/monsters/theCity/champ/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "Chosen",
       "name": "Soul of Chosen",
       "atlas": "images/monsters/theCity/chosen/skeleton.atlas",
-      "json": "images/monsters/theCity/chosen/skeleton.json"
+      "json": "images/monsters/theCity/chosen/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 2,
+          "id": "chosen_gain_strength"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 10
+        }
+      ]
     },
     {
       "id": "Cultist",
       "name": "Soul of Cultist",
       "atlas": "images/monsters/theBottom/cultist/skeleton.atlas",
-      "json": "images/monsters/theBottom/cultist/skeleton.json"
+      "json": "images/monsters/theBottom/cultist/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 1,
+          "id": "cultist_ritual"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 2
+        }
+      ]
     },
     {
       "id": "Darkling",
       "name": "Soul of Darkling",
       "atlas": "images/monsters/theForest/darkling/skeleton.atlas",
-      "json": "images/monsters/theForest/darkling/skeleton.json"
+      "json": "images/monsters/theForest/darkling/skeleton.json",
+      "requiresUpgrade": true,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 6
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 1,
+          "id": "darkling_revive"
+        }
+      ]
     },
     {
       "id": "Deca",
       "name": "Soul of Deca",
       "atlas": "images/monsters/theForest/deca/skeleton.atlas",
-      "json": "images/monsters/theForest/deca/skeleton.json"
+      "json": "images/monsters/theForest/deca/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "Donu",
       "name": "Soul of Donu",
       "atlas": "images/monsters/theForest/donu/skeleton.atlas",
-      "json": "images/monsters/theForest/donu/skeleton.json"
+      "json": "images/monsters/theForest/donu/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "Exploder",
       "name": "Soul of Exploder",
       "atlas": "images/monsters/theForest/exploder/skeleton.atlas",
-      "json": "images/monsters/theForest/exploder/skeleton.json"
-    },
-    {
-      "id": "FireOrb",
-      "name": "Soul of Fire Orb",
-      "atlas": "",
-      "json": ""
-    },
-    {
-      "id": "Dagger",
-      "name": "Soul of Dagger",
-      "atlas": "",
-      "json": ""
-    },
-    {
-      "id": "FlameBruiser",
-      "name": "Soul of Flame Bruiser",
-      "atlas": "",
-      "json": ""
+      "json": "images/monsters/theForest/exploder/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 6
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 20,
+          "id": "exploder_explode"
+        }
+      ]
     },
     {
       "id": "Reptomancer",
       "name": "Soul of Reptomancer",
       "atlas": "images/monsters/theForest/mage/skeleton.atlas",
-      "json": "images/monsters/theForest/mage/skeleton.json"
+      "json": "images/monsters/theForest/mage/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "FungiBeast",
       "name": "Soul of Beast Fun Guy",
       "atlas": "images/monsters/theBottom/fungi/skeleton.atlas",
-      "json": "images/monsters/theBottom/fungi/skeleton.json"
+      "json": "images/monsters/theBottom/fungi/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 3
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 1,
+          "id": "fungi_gain_strength"
+        }
+      ]
     },
     {
       "id": "FuzzyLouseDefensive",
       "name": "Soul of Louse",
       "atlas": "images/monsters/theBottom/louseGreen/skeleton.atlas",
-      "json": "images/monsters/theBottom/louseGreen/skeleton.json"
+      "json": "images/monsters/theBottom/louseGreen/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 2
+        },
+        {
+          "type": "DEFEND",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "FuzzyLouseNormal",
       "name": "Soul of Louse",
       "atlas": "images/monsters/theBottom/louseRed/skeleton.atlas",
-      "json": "images/monsters/theBottom/louseRed/skeleton.json"
+      "json": "images/monsters/theBottom/louseRed/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 2
+        },
+        {
+          "type": "DEFEND",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "GiantHead",
       "name": "Soul of Giant Head",
       "atlas": "images/monsters/theForest/head/skeleton.atlas",
-      "json": "images/monsters/theForest/head/skeleton.json"
+      "json": "images/monsters/theForest/head/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "GremlinFat",
       "name": "Soul of Fat Gremlin",
       "atlas": "images/monsters/theBottom/fatGremlin/skeleton.atlas",
-      "json": "images/monsters/theBottom/fatGremlin/skeleton.json"
+      "json": "images/monsters/theBottom/fatGremlin/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 2
+        },
+        {
+          "type": "WEAKEN",
+          "amount": 1
+        }
+      ]
     },
     {
       "id": "GremlinLeader",
       "name": "Soul of Gremlin Leader",
       "atlas": "images/monsters/theCity/gremlinleader/skeleton.atlas",
-      "json": "images/monsters/theCity/gremlinleader/skeleton.json"
+      "json": "images/monsters/theCity/gremlinleader/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "GremlinNob",
       "name": "Soul of Gremlin Noob",
       "atlas": "images/monsters/theBottom/nobGremlin/skeleton.atlas",
-      "json": "images/monsters/theBottom/nobGremlin/skeleton.json"
+      "json": "images/monsters/theBottom/nobGremlin/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 4
+        },
+        {
+          "type": "VULNERABLE",
+          "amount": 1
+        }
+      ]
     },
     {
       "id": "GremlinThief",
       "name": "Soul of Sneaky Grimlin",
       "atlas": "images/monsters/theBottom/thiefGremlin/skeleton.atlas",
-      "json": "images/monsters/theBottom/thiefGremlin/skeleton.json"
+      "json": "images/monsters/theBottom/thiefGremlin/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 5
+        }
+      ]
     },
     {
       "id": "GremlinTsundere",
       "name": "Soul of Shield Gremlin",
       "atlas": "images/monsters/theBottom/femaleGremlin/skeleton.atlas",
-      "json": "images/monsters/theBottom/femaleGremlin/skeleton.json"
+      "json": "images/monsters/theBottom/femaleGremlin/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 5
+        },
+        {
+          "type": "DEFEND",
+          "amount": 3
+        }
+      ]
     },
     {
       "id": "GremlinWarrior",
       "name": "Soul of Happy Gremlin",
       "atlas": "images/monsters/theBottom/angryGremlin/skeleton.atlas",
-      "json": "images/monsters/theBottom/angryGremlin/skeleton.json"
+      "json": "images/monsters/theBottom/angryGremlin/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 3
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 1,
+          "id": "gremlin_warrior_gain_angry"
+        }
+      ]
     },
     {
       "id": "GremlinWizard",
       "name": "Soul of Gremlin Wizard",
       "atlas": "images/monsters/theBottom/wizardGremlin/skeleton.atlas",
-      "json": "images/monsters/theBottom/wizardGremlin/skeleton.json"
+      "json": "images/monsters/theBottom/wizardGremlin/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 10
+        }
+      ]
     },
     {
       "id": "Healer",
       "name": "Soul of Mystic",
       "atlas": "images/monsters/theCity/healer/skeleton.atlas",
-      "json": "images/monsters/theCity/healer/skeleton.json"
+      "json": "images/monsters/theCity/healer/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 4
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 3,
+          "id": "mystic_heal"
+        }
+      ]
     },
     {
       "id": "JawWorm",
       "name": "Soul of Jaw Worm",
       "atlas": "images/monsters/theBottom/jawWorm/skeleton.atlas",
       "json": "images/monsters/theBottom/jawWorm/skeleton.json",
+      "requiresUpgrade": false,
       "moves": [
-        {"type": "CUSTOM", "amount": 1, "id": "bAndD"}
+        {
+          "type": "CUSTOM",
+          "amount": 3,
+          "id": "jaw_worm_block_attack"
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 1,
+          "id": "jaw_worm_gain_strength"
+        }
       ]
     },
     {
       "id": "Lagavulin",
       "name": "Soul of Lagavulin",
       "atlas": "images/monsters/theBottom/lagavulin/skeleton.atlas",
-      "json": "images/monsters/theBottom/lagavulin/skeleton.json"
+      "json": "images/monsters/theBottom/lagavulin/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "Looter",
       "name": "Soul of Looter",
       "atlas": "images/monsters/theBottom/looter/skeleton.atlas",
-      "json": "images/monsters/theBottom/looter/skeleton.json"
+      "json": "images/monsters/theBottom/looter/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 5
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 10,
+          "id": "looter_gain_gold"
+        }
+      ]
     },
     {
       "id": "Maw",
       "name": "Soul of The Maw",
       "atlas": "images/monsters/theForest/maw/skeleton.atlas",
-      "json": "images/monsters/theForest/maw/skeleton.json"
+      "json": "images/monsters/theForest/maw/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "WEAKEN",
+          "amount": 2
+        },
+        {
+          "type": "ATTACK",
+          "amount": 12
+        }
+      ]
     },
     {
       "id": "Mugger",
       "name": "Soul of Mugger",
       "atlas": "images/monsters/theCity/looterAlt/skeleton.atlas",
-      "json": "images/monsters/theCity/looterAlt/skeleton.json"
+      "json": "images/monsters/theCity/looterAlt/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "ATTACK",
+          "amount": 5
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 10,
+          "id": "mugger_gain_gold"
+        }
+      ]
     },
     {
       "id": "Nemesis",
       "name": "Soul of Nemesis",
       "atlas": "images/monsters/theForest/nemesis/skeleton.atlas",
-      "json": "images/monsters/theForest/nemesis/skeleton.json"
+      "json": "images/monsters/theForest/nemesis/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "Orb Walker",
       "name": "Soul of Orb Walker",
       "atlas": "images/monsters/theForest/orbWalker/skeleton.atlas",
-      "json": "images/monsters/theForest/orbWalker/skeleton.json"
-    },
-    {
-      "id": "Puppeteer",
-      "name": "Soul of Puppeteer",
-      "atlas": "",
-      "json": ""
+      "json": "images/monsters/theForest/orbWalker/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 2,
+          "id": "orb_walker_gain_orb_strength"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "Repulsor",
       "name": "Soul of Repulsor",
       "atlas": "images/monsters/theForest/repulser/skeleton.atlas",
-      "json": "images/monsters/theForest/repulser/skeleton.json"
+      "json": "images/monsters/theForest/repulser/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 1,
+          "id": "repulsor_exhaust"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "Sentry",
       "name": "Soul of Sentry",
       "atlas": "images/monsters/theBottom/sentry/skeleton.atlas",
-      "json": "images/monsters/theBottom/sentry/skeleton.json"
+      "json": "images/monsters/theBottom/sentry/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "Serpent",
-      "name": "Soul of Spire Growth",
+      "name": "Soul of Serpent",
       "atlas": "images/monsters/theForest/spireGrowth/skeleton.atlas",
-      "json": "images/monsters/theForest/spireGrowth/skeleton.json"
+      "json": "images/monsters/theForest/spireGrowth/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 2,
+          "id": "serpent_constriction"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 10
+        }
+      ]
     },
     {
       "id": "Shelled Parasite",
       "name": "Soul of Shelled Parasite",
       "atlas": "images/monsters/theCity/shellMonster/skeleton.atlas",
-      "json": "images/monsters/theCity/shellMonster/skeleton.json"
+      "json": "images/monsters/theCity/shellMonster/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 6,
+          "id": "shelled_parasite_bite_and_heal"
+        },
+        {
+          "type": "DEFEND",
+          "amount": 3
+        }
+      ]
     },
     {
       "id": "SlaverBlue",
       "name": "Soul of Slaver",
       "atlas": "images/monsters/theBottom/blueSlaver/skeleton.atlas",
-      "json": "images/monsters/theBottom/blueSlaver/skeleton.json"
+      "json": "images/monsters/theBottom/blueSlaver/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "WEAKEN",
+          "amount": 2
+        },
+        {
+          "type": "ATTACK",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "SlaverBoss",
       "name": "Soul of Taskmaster",
-      "atlas": "",
-      "json": ""
+      "atlas": "images/monsters/theCity/slaverMaster/skeleton.atlas",
+      "json": "images/monsters/theCity/slaverMaster/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "SlaverRed",
       "name": "Soul of Slaver",
       "atlas": "images/monsters/theBottom/redSlaver/skeleton.atlas",
-      "json": "images/monsters/theBottom/redSlaver/skeleton.json"
+      "json": "images/monsters/theBottom/redSlaver/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "VULNERABLE",
+          "amount": 2
+        },
+        {
+          "type": "ATTACK",
+          "amount": 7
+        }
+      ]
     },
     {
       "id": "SlimeBoss",
       "name": "Soul of SlimeBoss",
       "atlas": "images/monsters/theCity/slaverMaster/skeleton.atlas",
-      "json": "images/monsters/theCity/slaverMaster/skeleton.json"
+      "json": "images/monsters/theCity/slaverMaster/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "SnakePlant",
       "name": "Soul of Snake Plant",
       "atlas": "images/monsters/theCity/snakePlant/skeleton.atlas",
-      "json": "images/monsters/theCity/snakePlant/skeleton.json"
+      "json": "images/monsters/theCity/snakePlant/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "WEAKEN",
+          "amount": 1
+        },
+        {
+          "type": "CUSTOM",
+          "amount": 4,
+          "id": "snake_plant_multi_attack"
+        }
+      ]
     },
     {
       "id": "Snecko",
       "name": "Soul of Snecko",
       "atlas": "images/monsters/theCity/reptile/skeleton.atlas",
-      "json": "images/monsters/theCity/reptile/skeleton.json"
+      "json": "images/monsters/theCity/reptile/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 2,
+          "id": "snecko_randomize_card_cost"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "SphericGuardian",
       "name": "Soul of Spheric Guardian",
       "atlas": "images/monsters/theCity/sphere/skeleton.atlas",
-      "json": "images/monsters/theCity/sphere/skeleton.json"
+      "json": "images/monsters/theCity/sphere/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "DEFEND",
+          "amount": 20
+        },
+        {
+          "type": "ATTACK",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "SpikeSlime_L",
       "name": "Soul of Spike Slime (L)",
       "atlas": "images/monsters/theBottom/slimeAltL/skeleton.atlas",
-      "json": "images/monsters/theBottom/slimeAltL/skeleton.json"
+      "json": "images/monsters/theBottom/slimeAltL/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 3,
+          "id": "spiked_slime_l_discard_and_draw"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 12
+        }
+      ]
     },
     {
       "id": "SpikeSlime_M",
       "name": "Soul of Spike Slime (M)",
       "atlas": "images/monsters/theBottom/slimeAltM/skeleton.atlas",
-      "json": "images/monsters/theBottom/slimeAltM/skeleton.json"
+      "json": "images/monsters/theBottom/slimeAltM/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 2,
+          "id": "spiked_slime_m_discard_and_draw"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "SpikeSlime_S",
       "name": "Soul of Spike Slime (S)",
       "atlas": "images/monsters/theBottom/slimeAltS/skeleton.atlas",
-      "json": "images/monsters/theBottom/slimeAltS/skeleton.json"
+      "json": "images/monsters/theBottom/slimeAltS/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 1,
+          "id": "spiked_slime_s_discard_and_draw"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 3
+        }
+      ]
     },
     {
       "id": "Spiker",
       "name": "Soul of Spiker",
       "atlas": "images/monsters/theForest/spiker/skeleton.atlas",
-      "json": "images/monsters/theForest/spiker/skeleton.json"
+      "json": "images/monsters/theForest/spiker/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 2,
+          "id": "spiker_gain_thorns"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "TheCollector",
       "name": "Soul of The Collector",
       "atlas": "images/monsters/theCity/collector/skeleton.atlas",
-      "json": "images/monsters/theCity/collector/skeleton.json"
+      "json": "images/monsters/theCity/collector/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "TheGuardian",
       "name": "Soul of The Guardian",
       "atlas": "images/monsters/theBottom/boss/guardian/skeleton.atlas",
-      "json": "images/monsters/theBottom/boss/guardian/skeleton.json"
+      "json": "images/monsters/theBottom/boss/guardian/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "TimeEater",
       "name": "Soul of TimeEater",
       "atlas": "images/monsters/theForest/timeEater/skeleton.atlas",
-      "json": "images/monsters/theForest/timeEater/skeleton.json"
+      "json": "images/monsters/theForest/timeEater/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "TorchHead",
       "name": "Soul of Torch Head",
       "atlas": "images/monsters/theCity/torchHead/skeleton.atlas",
-      "json": "images/monsters/theCity/torchHead/skeleton.json"
+      "json": "images/monsters/theCity/torchHead/skeleton.json",
+      "requiresUpgrade": false,
+      "moves": [
+        {
+          "type": "CUSTOM",
+          "amount": 2,
+          "id": "torch_head_gain_strength"
+        },
+        {
+          "type": "ATTACK",
+          "amount": 6
+        }
+      ]
     },
     {
       "id": "Transient",
       "name": "Soul of Transient",
       "atlas": "images/monsters/theForest/transient/skeleton.atlas",
-      "json": "images/monsters/theForest/transient/skeleton.json"
+      "json": "images/monsters/theForest/transient/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "SpireShield",
       "name": "Soul of Spire Shield",
       "atlas": "images/monsters/theEnding/shield/skeleton.atlas",
-      "json": "images/monsters/theEnding/shield/skeleton.json"
+      "json": "images/monsters/theEnding/shield/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "SpireSpear",
       "name": "Soul of Spire Spear",
       "atlas": "images/monsters/theEnding/spear/skeleton.atlas",
-      "json": "images/monsters/theEnding/spear/skeleton.json"
+      "json": "images/monsters/theEnding/spear/skeleton.json",
+      "requiresUpgrade": true
     },
     {
       "id": "WrithingMass",
       "name": "Soul of Writhing Mass",
       "atlas": "images/monsters/theForest/spaghetti/skeleton.atlas",
-      "json": "images/monsters/theForest/spaghetti/skeleton.json"
+      "json": "images/monsters/theForest/spaghetti/skeleton.json",
+      "requiresUpgrade": true
     }
   ]
 }

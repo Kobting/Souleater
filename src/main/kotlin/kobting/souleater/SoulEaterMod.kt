@@ -12,11 +12,11 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction
 import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.localization.CardStrings
-import com.megacrit.cardcrawl.monsters.city.Byrd
 import kobting.friendlyminions.monsters.AbstractFriendlyMonster
 import kobting.souleater.cards.SoulStealer
 import kobting.souleater.helpers.CardHelper
 import kobting.souleater.souls.CustomSoulMove
+import kobting.souleater.souls.CustomSoulMoves
 import kobting.souleater.souls.SoulMapper
 import kobting.souleater.souls.SoulMove
 import kobting.souleater.souls.SoulMoveHelper
@@ -71,7 +71,13 @@ class SoulEaterMod private constructor(): EditKeywordsSubscriber, EditCardsSubsc
 
         addCustomSoulMoves()
 
-        SoulMapper.addSouls("kobting/localization/eng/souleater-souls.json")
+        //if (BaseMod.hasModID("redraw")) {
+          //  println("Loading redraw souls")
+            //SoulMapper.addSouls("kobting/localization/eng/souleater-souls-redraw.json")
+        //} else {
+          SoulMapper.addSouls("kobting/localization/eng/souleater-souls.json")
+        CustomSoulMoves.initializeCustomSoulMoves()
+        //}
 
         BaseMod.loadCustomStrings(CardStrings::class.java, Gdx.files.internal("kobting/localization/eng/souleater-cards.json").readString(StandardCharsets.UTF_8.toString()))
     }
